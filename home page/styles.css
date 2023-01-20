@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import "bourbon";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.1;
+}
+
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+  width: min(90%, 1110px);
+  margin-inline: auto;
+}
+
+section.description .container {
+  padding: 2rem 4rem;
+}
+
+section.description h1 {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 70px;
+  font-family: "Vollkorn", serif;
+  margin-bottom: 2rem;
+}
+
+section.description button {
+  display: block;
+  margin: auto;
+}
+
+section.newsletter .container {
+  padding: 1rem;
+}
+
+section.newsletter {
+  text-align: center;
+}
+
+section.newsletter h2 {
+  margin-bottom: 1rem;
+}
+
+section.contact .container {
+  padding: 2rem 4rem;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.contact :is(input, textarea) {
+  display: block;
+}
+
+section.contact h2 {
+  margin-bottom: 1rem;
+}
+
+section.contact label {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+section.contact textarea {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-align: center;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-family: "Futura PT", "Futura", sans-serif;
+  padding: 13px 0;
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: #333;
+  border: 1px solid #333;
+  color: #fefefe;
+  border-radius: 30px;
+}
+
+.description input[type="button"] {
+  width: 150px;
+}
+
+.contact input[type="button"] {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 999px) {
+  .two-col {
+    display: block;
+  }
+}
